@@ -1,28 +1,28 @@
 /*
-下载地址
+//涓嬭浇鍦板潃
 http://a.app.qq.com/o/simple.jsp?pkgname=com.xiangzi.jukandian&ckey=CK1416436838701
-邀请码必填得金币 24493019
+//閭€璇风爜蹇呭～寰楅噾甯� 24493019
 [rewrite_local]
 https://www.xiaodouzhuan.cn/jkd/user/userlive.action url script-request-body http://47.101.146.160/scripts/jkd.js
 
 hostname = *.xiaodouzhuan.cn
-##点任务获取数据##
+##鐐逛换鍔¤幏鍙栨暟鎹�##
 ===========ql===========
-拉取
+//鎷夊彇
 ql raw http://47.101.146.160/scripts/jkd.js
-变量
-export jkdhd='{"openid": "替换的CK"}' 同CK 后面不需要!iOS!5.6.5
+//鍙橀噺
+export jkdhd='{"openid": "鏇挎崲鐨凜K"}' 鍚孋K 鍚庨潰涓嶉渶瑕�!iOS!5.6.5
 
-export jkdck='{"Cookie":"xz_jkd_appkey=替换的CK"}'
+export jkdck='{"Cookie":"xz_jkd_appkey=鏇挎崲鐨凜K"}'
 
-多账号用@隔开
+//澶氳处鍙风敤@闅斿紑
 */
 // [task_local]
-// */60 * * * * http://47.101.146.160/scripts/jkd.js, tag=聚看点, img-url=circles.hexagongrid.fill.system, enabled=true
+// */60 * * * * http://47.101.146.160/scripts/jkd.js, tag=鑱氱湅鐐�, img-url=circles.hexagongrid.fill.system, enabled=true
 
-const $ = new Env('聚看点');
+const $ = new Env('鑱氱湅鐐�');
 let status;
-status = (status = ($.getval("jkdstatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
+status = (status = ($.getval("jkdstatus") || "1") ) > 1 ? `${status}` : ""; // 璐﹀彿鎵╁睍瀛楃
 let jkdhdArr = [],jkdckArr = [],jzreadcount = ''
 let jkdhd= $.isNode() ? (process.env.jkdhd ? process.env.jkdhd : "") : ($.getdata('jkdhd') ? $.getdata('jkdhd') : "")
 let jkdck= $.isNode() ? (process.env.jkdck ? process.env.jkdck : "") : ($.getdata('jkdck') ? $.getdata('jkdck') : "")
@@ -46,14 +46,14 @@ var timestamp = Math.round(new Date().getTime()/1000).toString();
             jkdhdArr.push($.getdata(`jkdhd${i}`))
             jkdckArr.push($.getdata(`jkdck${i}`))
             }
-    console.log(`------------- 共${jkdhdArr.length}个账号-------------\n`)
+    console.log(`------------- 鍏�${jkdhdArr.length}涓处鍙�-------------\n`)
       for (let i = 0; i < jkdhdArr.length; i++) {
         if (jkdhdArr[i]) {
           jkdhd = jkdhdArr[i];
           jkdck = jkdckArr[i]
           $.index = i + 1;
         
-          console.log(`\n开始【聚看点${$.index}】`)
+          console.log(`\n寮€濮嬨€愯仛鐪嬬偣${$.index}銆慲)
 
 await qx()
 
@@ -65,7 +65,7 @@ await qx()
           if (process.env.jkdhd && process.env.jkdhd.indexOf('@') > -1) {
             jkdhdArr = process.env.jkdhd.split('@');
             jkdckArr = process.env.jkdck.split('@');
-            console.log(`您选择的是用"@"隔开\n`)
+            console.log(`鎮ㄩ€夋嫨鐨勬槸鐢�"@"闅斿紑\n`)
         } else {
             jkdhds = [process.env.jkdhd]
             jkdcks = [process.env.jkdck]
@@ -80,13 +80,13 @@ await qx()
             jkdckArr.push(jkdcks[item])
         }
     })
-          console.log(`共${jkdhdArr.length}个cookie`)
+          console.log(`鍏�${jkdhdArr.length}涓猚ookie`)
 	        for (let k = 0; k < jkdhdArr.length; k++) {
                 $.message = ""
                 jkdhd = jkdhdArr[k]
                 jkdck = jkdckArr[k]
                 $.index = k + 1;
-          console.log(`\n开始【聚看点${$.index}】`)
+          console.log(`\n寮€濮嬨€愯仛鐪嬬偣${$.index}銆慲)
           //$.log(jkdhd)
 await ql()
 	        }
@@ -107,7 +107,7 @@ if(jkdck)    $.setdata(jkdck,`jkdck${status}`)
 $.log(jkdhd)
 $.log(jkdck)
 
-   $.msg($.name,"",'聚看点'+`${status}` +'数据获取成功！')
+   $.msg($.name,"",'鑱氱湅鐐�'+`${status}` +'鏁版嵁鑾峰彇鎴愬姛锛�')
  
 }
 }
