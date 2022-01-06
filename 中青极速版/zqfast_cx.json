@@ -1,17 +1,39 @@
 {
-  "name": "中青重写订阅",
+  "name": "中青极速版重写订阅",
   "author": "elecV2p",
-  "mitmhost": ["kandian.wkandian.com"],
+  "mitmhost": ["user.youth.cn"],
   "rewrite": [
     {
-      "match": "https://kandian.wkandian.com/v5/article/info.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zqwz.js",
+      "match": "https://user.youth.cn/FastApi/NewTaskSimple/getTaskList",
+      "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_read.js",
       "enable": true
     },
     {
-      "match": "https://kandian.wkandian.com/v5/article/detail.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zqwz.js",
+      "match": "https://user.youth.cn/v1/Nameless/adlickstart.json",
+      "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_kkz.js",
+      "enable": true
+    },
+ 
+     {
+      "match": "https://user.youth.cn/FastApi/Task/sign",
+      "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_reward.js",
+      "enable": true
+    },
+     {
+      "match": "https://user.youth.cn/FastApi/CommonReward/toGetReward",
+      "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_reward.js",
       "enable": true
     }
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   ]
 }
