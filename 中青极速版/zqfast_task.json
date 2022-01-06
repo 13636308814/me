@@ -6,18 +6,16 @@
   "resource": "https://github.com/13636308814/me/edit/main/%E4%B8%AD%E9%9D%92%E6%9E%81%E9%80%9F%E7%89%88/zqfast_task.json",
   "list": [
     {
-      "name": "文章视频",
+      "name": "zqfast文章视频",
       "type": "cron",
       "time": "25 8-22 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_read.js"
       }
-    },
-    
-    
+    },    
      {
-      "name": "看看赚",
+      "name": "zqfast看看赚",
       "type": "cron",
       "time": "35 10 * * *",
       "job": {
@@ -25,41 +23,26 @@
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_kkz.js"
       }
     },   
-    
-    
       {
-      "name": "分享阅读",
+      "name": "zqfast分享阅读",
       "type": "cron",
       "time": "15 6,12,18 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_shareRead.js"
       }
-    },  
-    
-    
-    
-     
+    },       
       {
-      "name": "日常任务",
+      "name": "zqfast日常任务",
       "type": "cron",
       "time": "5,35 8-20 * * *",
       "job": {
         "type": "runjs",
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_daily.js"
       }
-    },  
-       
-    
-    
-    
-    
-    
-    
-    
-    
+    },    
     {
-      "name": "每日奖励",
+      "name": "zqfast每日奖励",
       "type": "cron",
       "time": "10 22 * * *",
       "running": true,
@@ -68,19 +51,5 @@
         "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_reward.js"
       }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
   ]
 }
