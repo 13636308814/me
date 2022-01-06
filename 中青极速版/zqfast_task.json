@@ -1,28 +1,86 @@
 {
-  "name": "中青看点定时任务订阅",
+  "name": "中青看点极速版定时任务订阅",
   "desc": "无",
-  "date": "2021-08-05 20:32:08",
-  "author": "https://t.me/ShaolinTemple1",
-  "resource": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zq_cron.json",
+  "date": "2022-01-06 20:32:08",
+  "author": "--------------",
+  "resource": "https://github.com/13636308814/me/edit/main/%E4%B8%AD%E9%9D%92%E6%9E%81%E9%80%9F%E7%89%88/zqfast_task.json",
   "list": [
     {
-      "name": "中青签到",
+      "name": "文章视频",
       "type": "cron",
-      "time": "15 2 * * *",
+      "time": "25 8-22 * * *",
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zqqd.js"
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_read.js"
       }
     },
-    {
-      "name": "中青文章",
+    
+    
+     {
+      "name": "看看赚",
       "type": "cron",
-      "time": "30 7,12,18 * * *",
+      "time": "35 10 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_kkz.js"
+      }
+    },   
+    
+    
+      {
+      "name": "分享阅读",
+      "type": "cron",
+      "time": "15 6,12,18 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_shareRead.js"
+      }
+    },  
+    
+    
+    
+     
+      {
+      "name": "日常任务",
+      "type": "cron",
+      "time": "5,35 8-20 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_daily.js"
+      }
+    },  
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    {
+      "name": "每日奖励",
+      "type": "cron",
+      "time": "10 22 * * *",
       "running": true,
       "job": {
         "type": "runjs",
-        "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zqwz.js"
+        "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_reward.js"
       }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   ]
 }
