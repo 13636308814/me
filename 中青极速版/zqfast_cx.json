@@ -4,7 +4,7 @@
   "mitmhost": ["user.youth.cn"],
   "rewrite": [
     {
-      "match": "https://user.youth.cn/FastApi/NewTaskSimple/getTaskList",
+      "match": "https://user.youth.cn/FastApi/NewTaskSimple/getTaskList.json",
       "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_read.js",
       "enable": true
     },
@@ -15,12 +15,12 @@
     },
  
      {
-      "match": "https://user.youth.cn/FastApi/Task/sign",
+      "match": "https://user.youth.cn/FastApi/Task/sign.json",
       "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_reward.js",
       "enable": true
     },
      {
-      "match": "https://user.youth.cn/FastApi/CommonReward/toGetReward",
+      "match": "https://user.youth.cn/FastApi/CommonReward/toGetReward.json",
       "target": "https://raw.githubusercontent.com/leafxcy/JavaScript/main/zqkdFast/zqkdFast_reward.js",
       "enable": true
     }
