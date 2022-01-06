@@ -1,0 +1,17 @@
+{
+  "name": "中青重写订阅",
+  "author": "elecV2p",
+  "mitmhost": ["kandian.wkandian.com"],
+  "rewrite": [
+    {
+      "match": "https://kandian.wkandian.com/v5/article/info.json",
+      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zqwz.js",
+      "enable": true
+    },
+    {
+      "match": "https://kandian.wkandian.com/v5/article/detail.json",
+      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/zq/zqwz.js",
+      "enable": true
+    }
+  ]
+}
