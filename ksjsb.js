@@ -1,9 +1,12 @@
 /*
-IOS/安卓： 快手极速版解密版
-JS脚本透明，用的放心。
-0507版本，内置热心网友的看广告json，已放本人仓库，无需代理，可直接开跑。
-内置990金币+213金币+100金币，三组广告数据，提升收益降低黑号风险。
-预计日收益5-6w金币。
+IOS/安卓： 快手极速版
+
+Fixed by HarbourJ & 哑剧
+TG: https://t.me/HarbourToulu
+0504版本，内置热心网友的看广告json，已放本人仓库，并已加代理，可直接开跑
+Modified from 东哥, 东哥牛逼！
+Update: 0512版本，修复风控报错问题。需要放完整ck，格式：kpn=NEBULA; kpf=ANDROID_PHONE; did=ANDROID_xxxxx; kuaishou.api_st=xxxxx;
+
 重写：
 [task_local]
 #快手极速版
@@ -172,7 +175,7 @@ const _0x1eb2d5 = {
   'name': '抽奖视频161-100'
 },
       _0x37f16f = {
-  'extParams': "56dfe31594b858e69ef613f5e97227fbe9979240d7caecf84db127b47a4a8bb0a744376361788e9d4f8341978842c3a723b72e4befa3dc60a2c580bf4fc43399f798f286e2c8c3069effa1db27aa45bd",
+  'extParams': "56dfe31594b858e69ef613f5e97227fbf89856abafca7f90fab063cf60935d6faedb05b76646dc3ece57cd4898d412d86e985a2b510216ad4853603d2992501cea0a08182731fcbf023467cf30ecda80",
   'businessId': 11,
   'pageId': 11101,
   'posId': 4684,
@@ -180,7 +183,7 @@ const _0x1eb2d5 = {
   'name': "抽奖视频11-100"
 },
       _0x10efec = {
-  'extParams': '56dfe31594b858e69ef613f5e97227fbe9979240d7caecf84db127b47a4a8bb0a744376361788e9d4f8341978842c3a723b72e4befa3dc60a2c580bf4fc43399f798f286e2c8c3069effa1db27aa45bd',
+  'extParams': '56dfe31594b858e69ef613f5e97227fb67b973ad1394855c549442d15702f96393178eaeef5635134bb7e4ff97e69218c1f18455baf645dbaef685b7bf30c0914ea53ddcde26b2fa67b888203dab0fd4',
   'businessId': 11,
   'pageId': 11101,
   'posId': 4684,
@@ -227,15 +230,16 @@ let _0x134a17 = new Date(),
     _0x459e63 = 1.07,
     _0x2e716e = 0,
     _0x5bc515 = "ksjsb",
-    _0x180c0c = "https://ghproxy.com/https://raw.githubusercontent.com/treasunew/SillyLib/main/JavaScript/ks.json",
-    ksjsbjk = "https://ghproxy.com/https://raw.githubusercontent.com/treasunew/SillyLib/main/JavaScript/enhance.json",
+    _0x180c0c = "https://ghproxy.com/https://raw.githubusercontent.com/HarbourJ/Temp/main/backUp/ks.json",
+    ksjsbjk = "https://ghproxy.com/https://raw.githubusercontent.com/HarbourJ/Temp/main/ksjsbjk.json",
     _0x75eec0 = "https://127.0.0.1/";
 
 class _0x9d8dda {
   constructor(T) {
     let p = T["match"](/(kuaishou.api_st=[\w\-]+)/)[1] + ';';
+    let z = T["match"](/(did=[\w\-]+)/)[1] + ';';
     this["index"] = ++_0x2863b1;
-    this["cookie"] = "kpn=NEBULA; kpf=ANDROID_PHONE; did=ANDROID_" + _0x4b5cde(16) + "; ver=9.10; appver=9.10.40.2474; language=zh-cn; countryCode=CN; sys=ANDROID_5.1; client_key=2ac2a76d; " + p;
+    this["cookie"] = "kpn=NEBULA; kpf=ANDROID_PHONE; " + z + "; ver=9.10; appver=9.10.40.2474; language=zh-cn; countryCode=CN; sys=ANDROID_5.1; client_key=2ac2a76d; " + p;
     this["name"] = this["index"];
     this["valid"] = false;
     this["bindAlipay"] = false;
@@ -810,8 +814,11 @@ class _0x9d8dda {
     if (!a) {
       return;
     }
-
-    a['result'] == 1 ? console["log"]("账号[" + this["name"] + "]领取抽奖任务[" + T["taskTitle"] + "]奖励获得" + a["data"]["popUp"]["taskRewardName"]) : console["log"]("账号[" + this["name"] + "]领取抽奖任务[" + T["taskTitle"] + "]奖励失败：" + a["error_msg"]);
+    try {
+      a['result'] == 1 ? console["log"]("账号[" + this["name"] + "]领取抽奖任务[" + T["taskTitle"] + "]奖励获得" + a["data"]["popUp"]["taskRewardName"]) : console["log"]("账号[" + this["name"] + "]领取抽奖任务[" + T["taskTitle"] + "]奖励失败：" + a["error_msg"]);
+    } catch(err){
+      console.log("奖励领取失败");
+    }
   }
 
   async ["helpInvite"](T) {
@@ -1149,7 +1156,7 @@ async function _0x505e51() {
     if (a["status"] == 0) {
       if (_0x459e63 >= a["version"]) {
         _0x2e716e = true;
-        _0x75eec0 = "https://ziye0.coding.net/p/ziye/d/ql/git/raw/master/ks.json";
+        _0x75eec0 = "https://ghproxy.com/https://raw.githubusercontent.com/HarbourJ/Temp/main/backUp/ks.json";
         console["log"](a["msg"][a["status"]]);
         console['log'](a["updateMsg"]);
         console["log"]("现在运行的脚本版本是：1.07，最新脚本版本：" + a["latestVersion"]);
@@ -3472,7 +3479,7 @@ function Envcc(T, c) {
     'CMAOs': "setval",
     'dceom': 'ijzfe',
     'JighY': 'updateMsg',
-    'uwDzR': "https://ziye0.coding.net/p/ziye/d/ql/git/raw/master/ks.json",
+    'uwDzR': "https://ghproxy.com/https://raw.githubusercontent.com/HarbourJ/Temp/main/backUp/ks.json",
     'CvmUM': function (S, a) {
       return S === a;
     },
@@ -3966,7 +3973,7 @@ function Envcc(T, c) {
       if (p["JpIGP"]('ViWHE', p["NOwog"])) {
         if (p["QwtqA"](q, i[p["LTEld"]])) {
           d = true;
-          u = "https://ziye0.coding.net/p/ziye/d/ql/git/raw/master/ks.json";
+          u = "https://ghproxy.com/https://raw.githubusercontent.com/HarbourJ/Temp/main/backUp/ks.json";
           e[p["zptFf"]](A[p['EqCpB']][k[p["Qdwtu"]]]);
           o['log'](g["updateMsg"]);
           t["log"](p["UAuSH"](p["AVAsN"], L[p['prrOr']]));
