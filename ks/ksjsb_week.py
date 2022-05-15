@@ -92,7 +92,7 @@ def ksjsbFriendAssist(api_st, code):
 
 if __name__ == '__main__':
 
-    code = "909213408"
+    code = "2771960527430277"
     
     api_stCK = []
     with open('kuaishou_api_sts.txt', 'r') as f:
