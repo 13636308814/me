@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@13636308814 
-HarbourJ
-/
-Temp
-Public
-Code
-Issues
-7
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Temp/ksjsb_week.py /
-@HarbourJ
-HarbourJ add: ksjsb_week.py
-Latest commit fd5e16a 8 hours ago
- History
- 1 contributor
-82 lines (74 sloc)  3.37 KB
-   
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @Time    : 2022/4/27 13:49
@@ -109,15 +80,3 @@ if __name__ == '__main__':
         print(j, "-"*100)
         time.sleep(0.8)
         ksjsbFriendAssist(api_st, code)
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
